@@ -283,6 +283,7 @@ export default {
 
 <style lang="scss" scoped>
 .feed-back-wrapper {
+  padding-bottom: 15px;
   .card {
     text-decoration: none;
     cursor: pointer;

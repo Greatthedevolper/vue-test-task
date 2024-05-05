@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100svh;
+}
+@media (min-height: 800px) {
+  body {
+    height: 800px;
+  }
+}
+#app {
+  height: 100%;
+}
+.inner-body {
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+:root,
+.btn-primary {
+  --bs-btn-bg: hsla(160, 100%, 37%, 0.2);
+  --bs-btn-color: hsla(160, 100%, 37%, 0.9);
+  --bs-btn-border-color: hsla(160, 100%, 37%, 0.9);
+  --bs-btn-hover-bg: hsla(160, 100%, 37%, 0.2);
+  --bs-btn-hover-color: hsla(160, 100%, 37%, 0.9);
+  --bs-btn-hover-border-color: hsla(160, 100%, 37%, 0.9);
+}
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+  color: var(--bs-btn-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-border-color);
+}
+.btn.btn-primary:disabled {
+  --bs-btn-disabled-opacity: 0.7;
+  color: var(--bs-btn-color);
+  /* pointer-events: none; */
+  background-color: var(--bs-btn-bg);
+  border-color: var(--bs-btn-border-color);
+  opacity: var(--bs-btn-disabled-opacity);
+}
+
+.form-select,
+.form-control {
+  &:focus-visible,
+  &:focus {
+    border-color: hsla(160, 100%, 37%, 0.2);
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem hsla(160, 100%, 37%, 0.2);
+  }
+}
+.spinner-border {
+  --bs-spinner-width: 1rem;
+  --bs-spinner-height: 1rem;
+  --bs-spinner-vertical-align: -0.125em;
+  --bs-spinner-border-width: 2px;
+}

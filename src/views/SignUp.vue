@@ -97,12 +97,16 @@ export default {
       this.commonStore.loading = true;
       if (this.email === "" || this.password === "") {
         this.showToastError("Please fill all fields");
+        this.commonStore.loading = false;
       } else if (this.password.length < 6) {
         this.showToastError("Password should be at least 6 characters long");
+        this.commonStore.loading = false;
       } else if (!this.isEmailValid) {
         this.showToastError("Please enter a valid email address");
+        this.commonStore.loading = false;
       } else if (this.cpassword !== this.password) {
         this.showToastError("Confirm password does not match");
+        this.commonStore.loading = false;
       } else {
         try {
           const userCredential = await createUserWithEmailAndPassword(
@@ -119,6 +123,7 @@ export default {
           this.$router.push("/login");
         } catch (error) {
           this.showToastError(error.message);
+          this.commonStore.loading = false;
         }
       }
     },

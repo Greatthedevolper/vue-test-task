@@ -103,6 +103,7 @@ export default {
         !this.feedBackObject.description
       ) {
         toast.error("Please fill all fields");
+        this.commonStore.loading = false;
         return;
       }
 
@@ -120,6 +121,7 @@ export default {
       } catch (error) {
         toast.error("Error sending feedback");
         console.error("Error sending feedback:", error);
+        this.commonStore.loading = false;
       }
     }
   }

@@ -341,6 +341,9 @@ export default {
   border: 1px solid var(--bs-btn-border-color);
   border-radius: 5px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  @media (max-width: 400px) {
+    max-width: calc(100svw - 20px);
+  }
 
   .comment-list-class {
     max-height: 200px;
@@ -368,6 +371,11 @@ export default {
       right: -1px;
       padding: 2px 10px;
       border: 1px solid var(--bs-btn-border-color);
+    }
+    textarea.form-control{
+      max-height: 300px;
+      height: 180px;
+      resize: none;
     }
   }
 }

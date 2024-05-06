@@ -71,7 +71,7 @@
             v-for="commentsobject in commentsObject"
             :keft="commentsobject.index"
           >
-            <p class="text-wrap mb-1">{{ commentsobject.comments }}</p>
+            <p class="text-wrap mb-1" v-html="commentsobject.comments"></p>
             <div class="d-flex align-items-center justify-content-between">
               <span class="text-truncate h6">{{
                 commentsobject.userName
